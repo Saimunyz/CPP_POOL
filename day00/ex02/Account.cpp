@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 01:32:37 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/12 12:12:41 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/12 12:26:26 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	Account::displayAccountsInfos(void) {
 }
 
 void	Account::_displayTimestamp(void) {
-	std::cout << "[19920104_091532] ";
+	std::cout << "["<< "19920104_091532" << "] ";
 }
 
 int		Account::checkAmount(void) const {
