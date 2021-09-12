@@ -1,4 +1,4 @@
-NAME =		phonebook
+NAME =		account
 
 FLAGS =		-Wall -Werror -Wextra
 HEADER =	-I Account.hpp
