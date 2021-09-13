@@ -1,10 +1,10 @@
-NAME =		replace
+NAME =		karen
 
 FLAGS =		-Wall -Werror -Wextra
 ALL_INC =	-I includes
 
 CFILE =		main.cpp \
-
+			Karen.cpp \
 
 
 OFILE =		$(CFILE:.cpp=.o)

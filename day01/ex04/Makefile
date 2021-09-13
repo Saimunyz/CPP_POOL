@@ -6,7 +6,6 @@ ALL_INC =	-I includes
 CFILE =		main.cpp \
 
 
-
 OFILE =		$(CFILE:.cpp=.o)
 
 all: $(NAME)
