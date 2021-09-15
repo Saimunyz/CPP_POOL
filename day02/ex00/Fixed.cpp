@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:12:04 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/15 16:04:27 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/15 16:05:33 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,11 @@ Fixed::Fixed(Fixed const & rhs) {
 
 int	Fixed::getRawBits(void) const {
 	std::cout << "getRawBits member function called" << std::endl;
-	//return (float)(this->_value / (1 << _bits));
 	return (this->_value);
 }
 
 void	Fixed::setRawBits(int const raw) {
 	std::cout << "setRawBits member function called" << std::endl;
-	//this->_value = (raw * (1 << _bits));
 	this->_value = raw;
 }
 
