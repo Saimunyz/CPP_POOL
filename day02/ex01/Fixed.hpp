@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:03:04 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/15 16:29:57 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/15 17:14:55 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <string>
-#include <math.h>
+#include <cmath>
 
 class Fixed {
 
