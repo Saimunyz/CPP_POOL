@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:03:04 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/15 16:01:24 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:28:57 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Fixed {
 
-	int					_value;
-	static int const	_bits;
+	int			_value;
+	int const	_bits;
 
 	public:
 
