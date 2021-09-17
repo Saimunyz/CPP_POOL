@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:37:16 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/17 18:49:18 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:10:55 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		this->_hitpoints = 0;
 	else
 		this->_hitpoints -= amount;
-	std::cout << "ClapTrap " << this->getName() << " got attacked";
+	std::cout << this->getName() << " got attacked";
 	std::cout << ", receiving " << amount << " damage! ";
 	std::cout << "Now he has " << this->getHitpoints() << " hitpoints";
 	std::cout << std::endl;
@@ -79,7 +79,7 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 		this->_hitpoints = 100;
 	else
 		this->_hitpoints += amount;
-	std::cout << "ClapTrap " << this->getName() << " got repaired";
+	std::cout << this->getName() << " got repaired";
 	std::cout << ", of " << amount << " damage! ";
 	std::cout << "Now he has " << this->getHitpoints() << " hitpoints";
 	std::cout << std::endl;
