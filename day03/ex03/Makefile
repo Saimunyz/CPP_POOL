@@ -1,6 +1,6 @@
-NAME =		fragtrap
+NAME =		diamondtrap
 
-FLAGS =		-Wall -Werror -Wextra -Wshadow
+FLAGS =		-Wall -Werror -Wextra -Wno-shadow
 ALL_INC =	-I includes
 
 CFILE =		main.cpp \
