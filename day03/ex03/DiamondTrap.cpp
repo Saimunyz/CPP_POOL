@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 16:05:20 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/18 22:10:40 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/23 14:56:32 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,14 @@ DiamondTrap::~DiamondTrap(void) {
 	std::cout << "DiamondTrap destructor called" << std::endl;
 }
 
+std::string DiamondTrap::getName(void) const {return this->_name;}
+
 DiamondTrap &	DiamondTrap::operator=(DiamondTrap const & rhs) {
 	std::cout << "Diamondtrap assignation operator called" << std::endl;
 	if (this == &rhs)
 		return *this;
 	ClapTrap::operator=(rhs);
-	this->_name = rhs.getName();
+	_name = rhs.getName();
 	return *this;
 }
 
@@ -51,7 +53,7 @@ void	DiamondTrap::attack(std::string const & target) {
 }
 
 void	DiamondTrap::whoAmI(void) {
-	std::cout << this->DiamondTrap::_name << " DiamondTrap name" << std::endl;
+	std::cout << _name << " DiamondTrap name" << std::endl;
 	std::cout << this->ClapTrap::_name << " ClapTrap name" << std::endl;
 }
 
