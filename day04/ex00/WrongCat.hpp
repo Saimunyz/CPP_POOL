@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 22:02:53 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 14:20:42 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:29:10 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include <iostream>
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
+# include "WrongAnimal.hpp"
 
-Cat::Cat(void) : Animal() {
-	this->_type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl;
-}
+class WrongCat : public WrongAnimal {
+	public:
+		WrongCat(void);
+		~WrongCat(void);
+		WrongCat(WrongCat const & rhs);
+		WrongCat &	operator=(WrongCat const & rhs);
 
-Cat::Cat(Cat const & rhs) {
-	*this = rhs;
-}
+		void	makeSound(void) const;
+};
 
-Cat::~Cat(void) {
-	std::cout << "Cat default destructor called" << std::endl;
-}
-
-Cat &	Cat::operator=(Cat const & rhs) {
-	if (this == &rhs)
-		return *this;
-	this->_type = rhs.getType();
-	return *this;
-}
-
-void	Cat::makeSound(void) const {
-	std::cout << "Meow meow" << std::endl;
-}
+#endif

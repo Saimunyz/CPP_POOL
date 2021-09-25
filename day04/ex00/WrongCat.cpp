@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 22:02:53 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 14:20:42 by swagstaf         ###   ########.fr       */
+/*   Created: 2021/09/25 14:28:16 by swagstaf          #+#    #+#             */
+/*   Updated: 2021/09/25 14:33:05 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
-Cat::Cat(void) : Animal() {
+WrongCat::WrongCat(void) : WrongAnimal() {
 	this->_type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "WrongCat default constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const & rhs) {
+WrongCat::WrongCat(WrongCat const & rhs) {
 	*this = rhs;
 }
 
-Cat::~Cat(void) {
-	std::cout << "Cat default destructor called" << std::endl;
+WrongCat::~WrongCat(void) {
+	std::cout << "WrongCat default destructor called" << std::endl;
 }
 
-Cat &	Cat::operator=(Cat const & rhs) {
+WrongCat &	WrongCat::operator=(WrongCat const & rhs) {
 	if (this == &rhs)
 		return *this;
 	this->_type = rhs.getType();
 	return *this;
 }
 
-void	Cat::makeSound(void) const {
+void	WrongCat::makeSound(void) const {
 	std::cout << "Meow meow" << std::endl;
 }

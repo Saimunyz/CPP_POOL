@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 21:52:14 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/24 22:08:21 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:20:38 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Dog::Dog(Dog const & rhs) {
 }
 
 Dog::~Dog(void) {
-	std::cout << "Dog default destructor called";
+	std::cout << "Dog default destructor called" << std::endl;
 }
 
 Dog &	Dog::operator=(Dog const & rhs) {

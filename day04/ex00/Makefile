@@ -1,11 +1,15 @@
 NAME =		animal
 
-FLAGS =		-Wall -Werror -Wextra
+FLAGS =		-Wall -Werror -Wextra -Wshadow
 ALL_INC =	-I includes
 
 CFILE =		main.cpp \
+			Animal.cpp \
 			Dog.cpp \
 			Cat.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp \
+
 
 
 OFILE =		$(CFILE:.cpp=.o)

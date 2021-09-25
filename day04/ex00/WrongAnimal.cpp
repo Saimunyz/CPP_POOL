@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:50:44 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 14:20:46 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:33:29 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include <iostream>
 
-Animal::Animal(void) : _type("Unknown type") {
-	std::cout << "Animal default constructor called" << std::endl;
+WrongAnimal::WrongAnimal(void) : _type("Unknown type") {
+	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
-Animal::Animal(Animal const & rhs) {
+WrongAnimal::WrongAnimal(WrongAnimal const & rhs) {
 	*this = rhs;
 }
 
-Animal::~Animal(void) {
-	std::cout << "Animal default destructor called" << std::endl;
+WrongAnimal::~WrongAnimal(void) {
+	std::cout << "WrongAnimal default destructor called" << std::endl;
 }
 
-Animal &	Animal::operator=(Animal const & rhs) {
+WrongAnimal &	WrongAnimal::operator=(WrongAnimal const & rhs) {
 	if (this == &rhs)
 		return *this;
 	this->_type = rhs.getType();
 	return *this;
 }
 
-std::string	Animal::getType(void) const {
+std::string	WrongAnimal::getType(void) const {
 	return this->_type;
 }
 
-void	Animal::setType(std::string type) {
+void	WrongAnimal::setType(std::string type) {
 	this->_type = type;
 }
 
-void	Animal::makeSound(void) const {
-	std::cout << "Some strange sounds" << std::endl;
+void	WrongAnimal::makeSound(void) const {
+	std::cout << "Some wrong sounds" << std::endl;
 }

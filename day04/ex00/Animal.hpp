@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:46:26 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/24 21:51:20 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:31:57 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,20 @@
 
 class Animal {
 
-	protected:
-		std::string	_type;
 
 	public:
 		Animal(void);
 		Animal(Animal const & rhs);
-		~Animal(void);
+		virtual	~Animal(void);
 		Animal & operator=(Animal const & rhs);
 
 		void	setType(std::string type);
 		std::string	getType(void) const;
 
 		virtual void	makeSound(void) const;
+
+	protected:
+		std::string	_type;
 };
 
 #endif
