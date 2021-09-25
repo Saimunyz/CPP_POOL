@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 22:02:53 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 17:09:20 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/25 17:09:50 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat(void) : Animal() {
+Cat::Cat(void) : Animal(), _brain(new Brain()) {
 	this->_type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const & rhs) {
+Cat::Cat(Cat const & rhs) : _brain(new Brain(*rhs._brain)){
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = rhs;
 }
 
 Cat::~Cat(void) {
+	delete _brain;
 	std::cout << "Cat default destructor called" << std::endl;
 }
 
@@ -37,4 +38,12 @@ Cat &	Cat::operator=(Cat const & rhs) {
 
 void	Cat::makeSound(void) const {
 	std::cout << "Meow meow" << std::endl;
+}
+
+void	Cat::setIdea(std::string idea) {
+	this->_brain->setIdea(idea);
+}
+
+std::string	Cat::getIdea(unsigned int i) const {
+	return this->_brain->getIdea(i);
 }
