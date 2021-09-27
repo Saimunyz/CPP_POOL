@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:01:10 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 18:38:47 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:16:19 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ AMateria &	AMateria::operator=(AMateria const & rhs) {
 	return *this;
 }
 
-std::string	AMateria::getType(void) const {
+std::string const &	AMateria::getType(void) const {
 	return this->_type;
 }
 
 void	AMateria::use(ICharacter & target) {
-	std::cout << "No material to use on " << targe.getName() << std::endl;
+	std::cout << "No material to use on " << target.getName() << std::endl;
 }
 
 std::ostream &	operator<<(std::ostream & o, AMateria const & rhs)

@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:25:09 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 18:42:03 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/27 15:21:25 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,21 @@ Ice::Ice(Ice const & rhs) {
 }
 
 Ice &	Ice::operator=(Ice const & rhs) {
-	if (rhis == &rhs)
+	if (this == &rhs)
 		return *this;
 	else
+	{
 		AMateria::operator=(rhs);
+		return *this;
+	}
 }
 
 AMateria *	Ice::clone(void) const {
-	return (new Ice(*this))
+	return (new Ice(*this));
 }
 
 void	Ice::use(ICharacter & target) {
-	std::cout << "* shoots an ice bolt at " << target.getNmae() << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 
 

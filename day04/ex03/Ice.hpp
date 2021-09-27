@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:20:51 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/25 18:37:14 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:16:47 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Ice : public AMateria {
 	public:
 		Ice(void);
 		Ice(Ice const & rhs);
-		~Ice(void)
+		~Ice(void);
 		Ice &	operator=(Ice const & rhs);
 
 		virtual AMateria*	clone(void) const;

@@ -1,11 +1,14 @@
-NAME =		animal
+NAME =		main
 
 FLAGS =		-Wall -Werror -Wextra -Wshadow
 ALL_INC =	-I includes
 
 CFILE =		main.cpp \
-
-
+			AMateria.cpp \
+			Character.cpp \
+			Cure.cpp \
+			Ice.cpp \
+			MateriaSource.cpp \
 
 OFILE =		$(CFILE:.cpp=.o)
 
