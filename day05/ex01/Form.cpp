@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 16:36:03 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/28 17:05:43 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:06:17 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ Form::Form(std::string name, unsigned int sign, unsigned int exec) : _name(name)
 	std::cout << sign << " and grade_to_exec "<< exec << " constructor called" << std::endl;
 }
 
-Form::Form(Form const & rhs) : _name(rhs._name), _grade_to_exec(rhs._grade_to_exec),
-	_grade_to_sign(rhs._grade_to_sign) {
+Form::Form(Form const & rhs) : _name(rhs._name), _grade_to_sign(rhs._grade_to_sign),
+	_grade_to_exec(rhs._grade_to_exec)
+{
 	*this = rhs;
 	std::cout << "Form copy  constructor called" << std::endl;
 }
@@ -71,6 +72,6 @@ std::ostream &	operator<<(std::ostream & o, Form const & rhs) {
 	o << "Form " << rhs.getName() << std::endl;
 	o << "signed: " << rhs.isSigned() << std::endl;
 	o << "signing grade: " << rhs.getGradeToSign() << std::endl;
-	o << "executing grade: " << rhs.getGradeToExec() << std::endl;
+	o << "executing grade: " << rhs.getGradeToExec();
 	return o;
 }

@@ -4,6 +4,7 @@ FLAGS =		-Wall -Werror -Wextra -Wshadow
 
 CFILE =		main.cpp \
 			Bureaucrat.cpp \
+			Form.cpp \
 
 OFILE =		$(CFILE:.cpp=.o)
 

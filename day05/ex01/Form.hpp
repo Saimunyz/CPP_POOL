@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:28:25 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/28 17:05:05 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:50:42 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FORM_HPP
 # include <string>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
 
@@ -36,8 +38,8 @@ class Form {
 		};
 
 	private:
-		bool					_signed;
 		std::string const		_name;
+		bool					_signed;
 		unsigned int const		_grade_to_sign;
 		unsigned int const		_grade_to_exec;
 

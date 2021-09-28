@@ -6,7 +6,7 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:11:20 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/09/28 16:31:30 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:48:46 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string>
 # include <stdexcept>
 # include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 
