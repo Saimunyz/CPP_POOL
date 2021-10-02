@@ -3,6 +3,10 @@ NAME =		cast
 FLAGS =		-Wall -Werror -Wextra -Wshadow
 
 CFILE =		main.cpp \
+			A.cpp \
+			B.cpp \
+			C.cpp \
+			Base.cpp \
 
 OFILE =		$(CFILE:.cpp=.o)
 

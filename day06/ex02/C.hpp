@@ -6,12 +6,12 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 23:14:11 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/10/01 23:14:22 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/10/02 18:26:35 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef C_HPP
-# define c_HPP
+# define C_HPP
 # include "Base.hpp"
 
 class C : public Base {
