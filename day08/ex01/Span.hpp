@@ -6,12 +6,12 @@
 /*   By: swagstaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:32:35 by swagstaf          #+#    #+#             */
-/*   Updated: 2021/10/07 17:38:14 by swagstaf         ###   ########.fr       */
+/*   Updated: 2021/10/07 21:50:46 by swagstaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-# define EASYFIND_HPP
+#ifndef SPAN_HPP
+# define SAPN_HPP
 # include <string>
 # include <vector>
 
