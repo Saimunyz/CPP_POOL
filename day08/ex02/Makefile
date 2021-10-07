@@ -1,0 +1,31 @@
+NAME =		span
+
+FLAGS =		-Wall -Werror -Wextra -Wno-shadow
+HEADER =	*.hpp
+
+CFILE =		main.cpp \
+			mutantstack.cpp \
+
+OFILE =		$(CFILE:.cpp=.o)
+
+all: $(NAME)
+
+$(OFILE): $(HEADER)
+
+$(NAME): $(OFILE)
+		clang++ -std=c++98 $(FLAGS) $(OFILE) -o $(NAME)
+
+%.o : %.cpp
+		clang++ -std=c++98 $(FLAGS) -c $< -o $@
+
+clean:
+		@/bin/rm -f $(OFILE)
+		@echo Cleaned $(NAME) object files
+
+fclean: clean
+		@/bin/rm -f $(NAME)
+		@echo Cleaned $(NAME)
+
+re: fclean all
+
+.PHONY: all clean flcean re
