@@ -1,10 +1,10 @@
-NAME =		span
+NAME =		mutantstack
 
 FLAGS =		-Wall -Werror -Wextra -Wno-shadow
 HEADER =	*.hpp
 
 CFILE =		main.cpp \
-			mutantstack.cpp \
+			MutantStack.cpp \
 
 OFILE =		$(CFILE:.cpp=.o)
 

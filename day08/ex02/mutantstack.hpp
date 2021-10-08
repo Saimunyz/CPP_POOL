@@ -12,35 +12,28 @@
 
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
-# include <string>
-# include <vector>
-# include <stack>
+#include <stack>
+#include <string>
 
-template <typename T>
-class MutantStack {
-
-	typedef T::const_iterator const_iterator;
-	typedef T::iterator iterator;
-	typedef T::reverse_iterator reverse_iterator;
-	typedef T::const_reverse_iterator const_reverse_iterator;
-
-
-
-	std::stack<T> _stck;
-	unsigned int	_len;
+template <typename T, typename container = std::deque<T> >
+class MutantStack : public std::stack<T, container> {
 
 	public:
+
+		typedef typename std::stack<T, container>::container_type::iterator iterator;
+		typedef typename std::stack<T, container>::container_type::const_iterator const_iterator;
+		typedef typename std::stack<T, container>::container_type::reverse_iterator reverse_iterator;
+		typedef typename std::stack<T, container>::container_type::const_reverse_iterator const_reverse_iterator;
+
+
 		MutantStack(void);
-		MutantStack(unsigned int len);
 		MutantStack(MutantStack const & rhs);
 		~MutantStack(void);
 
 		MutantStack &	operator=(MutantStack const & rhs);
 
-		void			display(void);
-
-		typedef T::const_iterator	begin(void);
-		typedef T::const_iterator	end(void);
+		iterator	begin(void);
+		iterator	end(void);
 
 };
 
