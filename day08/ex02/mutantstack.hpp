@@ -32,8 +32,8 @@ class MutantStack : public std::stack<T, container> {
 
 		MutantStack &	operator=(MutantStack const & rhs);
 
-		iterator	begin(void);
-		iterator	end(void);
+		iterator	begin(void) {this->c.begin()};
+		iterator	end(void) {this->c.end()};
 
 };
 

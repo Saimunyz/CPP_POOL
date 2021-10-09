@@ -46,7 +46,7 @@ typename MutantStack<T, container>::iterator	begin(void) {
 
 template <typename T, typename container>
 typename MutantStack<T, container>::iterator	end(void) {
-	return this->c.begin();
+
 }
 
 
