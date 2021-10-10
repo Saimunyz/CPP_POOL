@@ -26,14 +26,51 @@ class MutantStack : public std::stack<T, container> {
 		typedef typename std::stack<T, container>::container_type::const_reverse_iterator const_reverse_iterator;
 
 
-		MutantStack(void);
-		MutantStack(MutantStack const & rhs);
-		~MutantStack(void);
+		MutantStack(void) {};
+		~MutantStack(void) {};
 
-		MutantStack &	operator=(MutantStack const & rhs);
+		MutantStack(MutantStack const & rhs) {
+			*this = rhs;
+		};
 
-		iterator	begin(void) {this->c.begin()};
-		iterator	end(void) {this->c.end()};
+		MutantStack &	operator=(MutantStack const & rhs) {
+			if (this == &rhs)
+				return *this;
+			std::stack<T, container>::operator=(rhs);
+			return *this;
+		};
+
+		iterator	begin(void) {
+			return this->c.begin();
+		};
+
+		const_iterator	begin(void) const {
+			return this->c.begin();
+		};
+
+		iterator	end(void) {
+			return this->c.end();
+		};
+
+		const_iterator	end(void) const{
+			return this->c.end();
+		};
+
+		reverse_iterator	rbegin(void) {
+			return this->c.rbegin();
+		};
+
+		reverse_iterator	rend(void) {
+			return this->c.rend();
+		};
+
+		const_reverse_iterator	rbegin(void) const{
+			return this->c.rbegin();
+		};
+
+		const_reverse_iterator	rend(void) const{
+			return this->c.rend();
+		};
 
 };
 
